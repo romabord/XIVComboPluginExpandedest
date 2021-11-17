@@ -7,7 +7,7 @@ namespace XIVComboExpandedestPlugin
     /// </summary>
     public enum CustomComboPreset
     {
-        // Last enum used: 102
+        // Last enum used: 95
         // ====================================================================================
         #region ALL CLASSES
 
@@ -186,6 +186,9 @@ namespace XIVComboExpandedestPlugin
 
         [CustomComboInfo("Monk Bootshine Feature", "Replaces Dragon Kick with Bootshine if both a form and Leaden Fist are up.", MNK.JobID, MNK.DragonKick)]
         MnkBootshineFeature = 65,
+        
+        [CustomComboInfo("Monk Snap Punch Feature", "Replaces Snap Punch with True Strike when in Raptor Form.", MNK.JobID, MNK.SnapPunch)]
+        MnkSnapPunchFeature = 95,
 
         #endregion
         // ====================================================================================
