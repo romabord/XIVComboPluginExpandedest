@@ -7,6 +7,7 @@ namespace XIVComboExpandedestPlugin.Combos
 
         public const uint
             Bootshine = 53,
+            TrueStrike = 54,
             DragonKick = 74,
             SnapPunch = 56,
             TwinSnakes = 61,
@@ -85,6 +86,25 @@ namespace XIVComboExpandedestPlugin.Combos
 
                 if (level < MNK.Levels.DragonKick)
                     return MNK.Bootshine;
+            }
+
+            return actionID;
+        }
+    }
+    
+    internal class MnkSnapPunchFeature : CustomCombo
+    {
+        protected override CustomComboPreset Preset => CustomComboPreset.MnkSnapPunchFeature;
+
+        protected override uint Invoke(uint actionID, uint lastComboMove, float comboTime, byte level)
+        {
+            if (actionID == MNK.SnapPunch)
+            {
+                if (HasEffect(MNK.Buffs.CoerlForm)
+                    return MNK.SnapPunch;
+
+                if (HasEffect(MNK.Buffs.RaptorForm)
+                    return MNK.TrueStrike;
             }
 
             return actionID;
